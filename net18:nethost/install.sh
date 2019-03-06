@@ -9,4 +9,4 @@ useradd -g users  user03
 echo "user01" | passwd --stdin user01
 echo "user02" | passwd --stdin user02
 echo "user03" | passwd --stdin user03
-
+echo "@edt ASIX M06 2018-2019" > /var/www/html/index.html
