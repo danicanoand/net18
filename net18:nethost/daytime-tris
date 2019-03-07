@@ -1,0 +1,15 @@
+service daytime-bis
+{
+	disable		= no
+	type 		= UNLISTED
+	socket_type 	= stream
+	protocol 	= tcp
+	wait 		= no
+	redirect 	= localhost 13
+	bind 		= 0.0.0.0 
+	port 		= 2013
+	user		= nobody
+	access_times = 16:00-21:00
+}
+
+#Amb el access_times diem que es podrà connectar de les 16 a les 21

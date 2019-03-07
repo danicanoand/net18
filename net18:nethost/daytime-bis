@@ -5,8 +5,17 @@ service daytime-bis
 	socket_type 	= stream
 	protocol 	= tcp
 	wait 		= no
-	redirect 	= localhost 3
+	redirect 	= localhost 13
 	bind 		= 0.0.0.0 
 	port 		= 2013
 	user		= nobody
+	#only_from	= 192.168.2.59
+	#no_access	= 172.19.0.2
+	#access_times = 08:00-14:00
+	log_on_success +=       DURATION HOST USERID
 }
+#No funcionarà desde fora del docker perque hem posat el only from
+#Amb el no_acces = 172.19.0.2 el diem que no podem accedir desde el nostre pc
+#pq es la nostra ip que contacta amb el docker
+#Amb el access_times diem que es podrà connectar de les 8 a les 14
+#docker logs nethost

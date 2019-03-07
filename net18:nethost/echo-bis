@@ -6,7 +6,11 @@ service echo-bis
 	protocol 	= tcp
 	wait 		= no
 	redirect 	= localhost 7
-	bind 		= 127.0.0.1
+	bind 		= 0.0.0.0
 	port 		= 2007
 	user		= nobody
+	instances	= 5
+	per_source	= 1
 }
+#amb instancies = 2 nomes podem fer dos telnet al tercer ens tanca la connexio
+#amb instancies = 2 i per_source = 1 nomes podem fer per 1 instancia per source
